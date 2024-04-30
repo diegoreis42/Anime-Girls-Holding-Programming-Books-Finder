@@ -41,7 +41,7 @@ func main() {
 	}
 
 	if res.StatusCode != 200 {
-		log.Fatalln("Not found")
+		log.Fatalln(res.Status)
 	}
 
 	body, err := io.ReadAll(res.Body)
