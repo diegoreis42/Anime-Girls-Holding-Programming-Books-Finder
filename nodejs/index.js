@@ -4,7 +4,7 @@ const https = require('https');
 const args = process.argv.slice(2);
 
 if (args.length === 0) {
-    console.error('Please provide a search query.');
+    console.error('Please provide a programming language.');
     process.exit(1);
 }
 
@@ -62,10 +62,10 @@ function openUrl(url) {
             exec(`xdg-open "${url}"`);
             break;
         default:
-            console.error('Platform not supported for opening URLs');
+            console.error('Platform not supported');
             process.exit(1);
     }
 }
 
 getRandomPhoto(repoUrl);
-console.log(`Searching for a nice photo in the category: "${args.join(' ')}"`);
+console.log(`Searching for a random photo of a anime girl holding a "${args.join(' ')} book"`);
